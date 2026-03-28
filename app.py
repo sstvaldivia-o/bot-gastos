@@ -9,29 +9,37 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ── Configuración ────────────────────────────────
-SPREADSHEET_NAME = "Wawas"
-
+SPREADSHEET_NAME = "Control de Gastos"  # nombre exacto de tu Google Sheet
 USUARIOS = {
-    os.getenv("NUMERO_SEBA"): {"nombre": "Seba", "hoja": "Personal Seba"},
-    os.getenv("NUMERO_RITA"): {"nombre": "Rita", "hoja": "Personal Rita"},
+    "+56930604535": {"nombre": "Seba", "hoja": "Personal Seba"},
+    "+56975798059": {"nombre": "Rita", "hoja": "Personal Rita"},
 }
 
 CATEGORIAS = {
     "supermercado": "Alimentación",
     "almuerzo":     "Alimentación",
     "restaurant":   "Alimentación",
+    "uber eats":    "Alimentación",
+    "rappi":        "Alimentación",
+    "comida":       "Alimentación",
+    "cita":         "Entretenimiento",
     "uber":         "Transporte",
     "bencina":      "Transporte",
     "metro":        "Transporte",
+    "bus":          "Transporte",
+    "Ropa":          "Vestuario",
+    "juegos":       "Entretenimiento",
     "netflix":      "Entretenimiento",
     "spotify":      "Entretenimiento",
     "cine":         "Entretenimiento",
     "farmacia":     "Salud",
     "médico":       "Salud",
+    "muebles":      "Vivienda",
     "arriendo":     "Vivienda",
     "luz":          "Vivienda",
     "agua":         "Vivienda",
 }
+
 
 HEADERS = ["Fecha", "Quién", "Descripción", "Monto", "Categoría", "Tipo"]
 
